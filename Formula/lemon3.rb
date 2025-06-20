@@ -5,29 +5,29 @@
 class Lemon3 < Formula
   desc "lemon3 is a filesharing system using Farcaster and IPFS."
   homepage "https://github.com/vrypan/lemon3"
-  version "0.3.1"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vrypan/lemon3/releases/download/v0.3.1/lemon3_Darwin_x86_64.tar.gz",
+      url "https://github.com/vrypan/lemon3/releases/download/v0.4.0/lemon3_Darwin_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "442c71ce757cc91d5aada91c111591cfec7b3d3f368ec079f6d553c9bd7e25c1"
+      sha256 "1f931d098ea708b64dfb4999ffc57184e4a530036fc2c70c802db6e65ef0cdf6"
 
       def install
         bin.install "lemon3"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vrypan/lemon3/releases/download/v0.3.1/lemon3_Darwin_arm64.tar.gz",
+      url "https://github.com/vrypan/lemon3/releases/download/v0.4.0/lemon3_Darwin_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "ca95a4dfa818cd245184d307a2f17fc89002fe2dda4c97f61f2b74895e4a070c"
+      sha256 "f0092db9405a2ad0b822e60fc988b4c984c882e585d9c7f020db281bf069c381"
 
       def install
         bin.install "lemon3"
@@ -37,23 +37,23 @@ class Lemon3 < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/vrypan/lemon3/releases/download/v0.3.1/lemon3_Linux_x86_64.tar.gz",
+      url "https://github.com/vrypan/lemon3/releases/download/v0.4.0/lemon3_Linux_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "871229ca792aca9074bc360d4db0d1d12e2db5e6233e464b11cc3f09f397ad90"
+      sha256 "5153c7e0754f8534d4574186fd452e3e24836d57bf08a0b5f5db1beff0127f6d"
       def install
         bin.install "lemon3"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/vrypan/lemon3/releases/download/v0.3.1/lemon3_Linux_arm64.tar.gz",
+      url "https://github.com/vrypan/lemon3/releases/download/v0.4.0/lemon3_Linux_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "d58bd710fb7b8b173ca67d1927ceeb28ca1eed3523117a55174f5b48477f79f5"
+      sha256 "3e565919cf3c82236656a69adf6321e022f12fc02d37adc0c9a9c1a041d0ad66"
       def install
         bin.install "lemon3"
       end
